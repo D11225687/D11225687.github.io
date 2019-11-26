@@ -3,11 +3,47 @@
   <head>
     <meta charset="utf-8">
     <title>你好，GitHub</title>
+   
+    <script>
+	var newurl = updateQueryStringParameter(window.location.href, 'openExternalBrowser', '1');
+//向当前url添加参数，没有历史记录
+if(navigator.userAgent.match(/android/i)){
+	window.history.replaceState({
+	path: newurl
+}, '', newurl);
+}
+else if(navigator.userAgent.match(/(iphone|ipad|ipod);?/i)){}
+else{}
+
+
+function updateQueryStringParameter(uri, key, value) {
+	if(!value) {
+		return uri;
+	}
+	var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+	var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+	if (uri.match(re)) {
+		return uri.replace(re, '$1' + key + "=" + value + '$2');
+	}
+	else {
+		return uri + separator + key + "=" + value;
+	}
+}
+
+	</script>
+    <script>
+      if(navigator.userAgent.match(/android/i)){
+	alert("我是安卓");
+}else if(navigator.userAgent.match(/(iphone|ipad|ipod);?/i)){
+	alert("我是IOS");
+}else{
+    alert("我是電腦")
+	}
+</script>
   </head>
   <body>
     <h1>覺得厲害</h1>
-    <input type="file" accept="image/*" capture="camera" />
-    <input type="file" accept="video/*;capture=camcorder">
+    <input type="file" accept="image/*"/>
 <input type="file" accept="audio/*;capture=microphone">
   </body>
 </html>
