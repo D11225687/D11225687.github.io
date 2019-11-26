@@ -5,7 +5,7 @@
     <title>你好，GitHub</title>
    
     <script>
-	var newurl = updateQueryStringParameter(window.location.href, 'openExternalBrowser', '1');
+	/*var newurl = updateQueryStringParameter(window.location.href, 'openExternalBrowser', '1');
 //向当前url添加参数，没有历史记录
 if(navigator.userAgent.match(/android/i)){
 	window.history.replaceState({
@@ -28,22 +28,34 @@ function updateQueryStringParameter(uri, key, value) {
 	else {
 		return uri + separator + key + "=" + value;
 	}
-}
+}*/
 
 	</script>
+	
     <script>
-      if(navigator.userAgent.match(/android/i)){
+      /*if(navigator.userAgent.match(/android/i)){
 	alert("我是安卓");
 }else if(navigator.userAgent.match(/(iphone|ipad|ipod);?/i)){
 	alert("我是IOS");
 }else{
     alert("我是電腦")
-	}
+	}*/
 </script>
   </head>
   <body>
     <h1>覺得厲害</h1>
     <input type="file" accept="image/*"/>
-<input type="file" accept="audio/*;capture=microphone">
+<script>
+if(navigator.userAgent.match(/android/i)){
+	if(document.location.href.includes("openExternalBrowser") == false){
+document.location.href=document.location.href+"?openExternalBrowser=1";
+}
+}else if(navigator.userAgent.match(/(iphone|ipad|ipod);?/i)){
+	
+}else{
+    
+	}
+
+</script>
   </body>
 </html>
