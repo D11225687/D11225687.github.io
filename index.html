@@ -41,25 +41,38 @@ function updateQueryStringParameter(uri, key, value) {
     alert("我是電腦")
 	}*/
 </script>
+	  
+	  
+	  
   </head>
   <body>
     <h1>覺得厲害</h1>
     <input type="file" accept="image/*"/>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
 <script>
 //設定Android網址
-var href = document.location.href;
+//var href = document.location.href;
 	// 網址沒有參數 ? 時, 直接加參數
-if (href.indexOf("?") < 0) {
-href += "?openExternalBrowser=1";
-} else {
+//if (href.indexOf("?") < 0) {
+//href += "?openExternalBrowser=1";
+/} else {
 // 網址有參數 ? 時, 用 & 加參數
-href += "&openExternalBrowser=1";
-}
+//href += "&openExternalBrowser=1";
+//}
+var href = "https://lin.ee/bZ9J32E";	
+	
 
 //判斷手機系統是Android、IOS、電腦
 if(navigator.userAgent.match(/android/i)){
 //若是頁面已經有參數則不要再附加(以免無窮迴圈)
-	if(document.location.href.includes("openExternalBrowser") == false){
+	//if(document.location.href.includes("openExternalBrowser") == false){
+	if(document.location.href.includes("bZ9J32E") == false){
 	//做重新導頁到新的網址
 	
 	document.location.href=href;
