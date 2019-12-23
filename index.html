@@ -46,21 +46,11 @@ function updateQueryStringParameter(uri, key, value) {
 	  
   </head>
   <body>
-    <h1>覺得厲害</h1>
-    <input type="file" accept="image/*"/>
+    <h1>ICharge易充電</h1>
+    <div>新增好友</<div>
 	  
-<a href="https://lin.ee/bZ9J32E">https://lin.ee/bZ9J32E</a>
 
-<img src="https://qr-official.line.me/sid/M/unp4137l.png">
-
-<a href="https://lin.ee/bZ9J32E"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png" alt="加入好友" height="36" border="0"></a>	  
-	  
-<a href="https://d11225687.github.io/?tsetRedirect">https://d11225687.github.io/?tsetRedirect</a>
-
-<img src="https://qr-official.line.me/sid/M/unp4137l.png">
-
-<a href="https://d11225687.github.io/?tsetRedirect"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png" alt="加入好友" height="36" border="0"></a>	  
-	  
+<a href="https://lin.ee/bZ9J32E"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png" alt="加入好友" height="36" border="0"></a>  
 		  
 	  
 	  
@@ -77,10 +67,17 @@ function updateQueryStringParameter(uri, key, value) {
 //href += "&openExternalBrowser=1";
 //}
 var href = "https://lin.ee/bZ9J32E";	
-	
+
+var sourceHref = document.location.href;
+var index = sourceHref.indexOf("?");
+if(index != -1){
+	var result = sourceHref.substr(index+1);
+	alert("這是從"+result);
+}
+
 
 //判斷手機系統是Android、IOS、電腦
-if(navigator.userAgent.match(/android/i) && document.location.href.includes("tsetRedirect")){
+if(navigator.userAgent.match(/android/i) &&  index == -1){
 //若是頁面已經有參數則不要再附加(以免無窮迴圈)
 	//if(document.location.href.includes("openExternalBrowser") == false){
 	if(document.location.href.includes("bZ9J32E") == false){
