@@ -1,107 +1,112 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>你好，GitHub</title>
-   
+
     <script>
-	/*var newurl = updateQueryStringParameter(window.location.href, 'openExternalBrowser', '1');
-//向当前url添加参数，没有历史记录
-if(navigator.userAgent.match(/android/i)){
-	window.history.replaceState({
-	path: newurl
-}, '', newurl);
-}
-else if(navigator.userAgent.match(/(iphone|ipad|ipod);?/i)){}
-else{}
+        /*var newurl = updateQueryStringParameter(window.location.href, 'openExternalBrowser', '1');
+        //向当前url添加参数，没有历史记录
+        if(navigator.userAgent.match(/android/i)){
+        	window.history.replaceState({
+        	path: newurl
+        }, '', newurl);
+        }
+        else if(navigator.userAgent.match(/(iphone|ipad|ipod);?/i)){}
+        else{}
 
+        function updateQueryStringParameter(uri, key, value) {
+        	if(!value) {
+        		return uri;
+        	}
+        	var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+        	var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+        	if (uri.match(re)) {
+        		return uri.replace(re, '$1' + key + "=" + value + '$2');
+        	}
+        	else {
+        		return uri + separator + key + "=" + value;
+        	}
+        }*/
+    </script>
 
-function updateQueryStringParameter(uri, key, value) {
-	if(!value) {
-		return uri;
-	}
-	var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
-	var separator = uri.indexOf('?') !== -1 ? "&" : "?";
-	if (uri.match(re)) {
-		return uri.replace(re, '$1' + key + "=" + value + '$2');
-	}
-	else {
-		return uri + separator + key + "=" + value;
-	}
-}*/
-
-	</script>
-	
     <script>
-      /*if(navigator.userAgent.match(/android/i)){
-	alert("我是安卓");
-}else if(navigator.userAgent.match(/(iphone|ipad|ipod);?/i)){
-	alert("我是IOS");
-}else{
-    alert("我是電腦")
-	}*/
-</script>
-	  
-	  
-	  
-  </head>
-  <body>
+        /*if(navigator.userAgent.match(/android/i)){
+        	alert("我是安卓");
+        }else if(navigator.userAgent.match(/(iphone|ipad|ipod);?/i)){
+        	alert("我是IOS");
+        }else{
+            alert("我是電腦")
+        	}*/
+    </script>
 
-    
+</head>
+
+<body>
+
     <h1 style="
     text-align: center;
     height: 150px;
 ">ibon</h1>
-    
-	 <div style="
+
+    <div style="
     text-align: right;
-    
+
 "> <a href="#" onclick="javascript:alert(Class1.doTestStuff(1, 'test'));" style="
     color: white;
-">Try It</a> </div>
+">Try It DoTestStuff</a> </div>
 
-<div style="
+    <div style="
+    text-align: right;
+
+"> <a href="#" onclick="javascript:alert(KioApp.GetLastUserActivityTime());" style="
+    color: white;
+">Try It KioApp</a> </div>
+
+    <div style="
     text-align: center;
-"><a href="https://lin.ee/bZ9J32E" style="
+">
+        <a href="https://lin.ee/bZ9J32E" style="
     text-align: center;
-"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png" alt="加入好友" height="36" border="0"></a></div>  
-	  
-<script>
-//設定Android網址
-//var href = document.location.href;
-	// 網址沒有參數 ? 時, 直接加參數
-//if (href.indexOf("?") < 0) {
-//href += "?openExternalBrowser=1";
-//} else {
-// 網址有參數 ? 時, 用 & 加參數
-//href += "&openExternalBrowser=1";
-//}
-var href = "https://lin.ee/bZ9J32E";	
+"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png" alt="加入好友" height="36" border="0"></a>
+    </div>
 
-var sourceHref = document.location.href;
-var index = sourceHref.indexOf("?");
-/*if(index != -1){
-	var result = sourceHref.substr(index+1);
-	alert("這是從"+result);
-}*/
+    <script>
+        //設定Android網址
+        //var href = document.location.href;
+        // 網址沒有參數 ? 時, 直接加參數
+        //if (href.indexOf("?") < 0) {
+        //href += "?openExternalBrowser=1";
+        //} else {
+        // 網址有參數 ? 時, 用 & 加參數
+        //href += "&openExternalBrowser=1";
+        //}
+        var href = "https://lin.ee/bZ9J32E";
 
+        var sourceHref = document.location.href;
+        var index = sourceHref.indexOf("?");
+        /*if(index != -1){
+        	var result = sourceHref.substr(index+1);
+        	alert("這是從"+result);
+        }*/
 
-//判斷手機系統是Android、IOS、電腦
-//if(navigator.userAgent.match(/android/i)){
-if( index == -1){
-//若是頁面已經有參數則不要再附加(以免無窮迴圈)
-	//if(document.location.href.includes("openExternalBrowser") == false){
-	if(document.location.href.includes("bZ9J32E") == false){
-	//做重新導頁到新的網址
-	
-	document.location.href=href;
-}
-}else if(navigator.userAgent.match(/(iphone|ipad|ipod);?/i)){
-	
-}else{
-    
-	}
+        //判斷手機系統是Android、IOS、電腦
+        //if(navigator.userAgent.match(/android/i)){
+        if (index == -1) {
+            //若是頁面已經有參數則不要再附加(以免無窮迴圈)
+            //if(document.location.href.includes("openExternalBrowser") == false){
+            if (document.location.href.includes("bZ9J32E") == false) {
+                //做重新導頁到新的網址
 
-</script>
-  </body>
+                document.location.href = href;
+            }
+        } else if (navigator.userAgent.match(/(iphone|ipad|ipod);?/i)) {
+
+        } else {
+
+        }
+    </script>
+</body>
+
 </html>
